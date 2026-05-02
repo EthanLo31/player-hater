@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      # Checks out your repo into the runner workspace <!--citation:4-->
+        # Checks out your repo into the runner workspace
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
