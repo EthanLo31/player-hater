@@ -1,0 +1,24 @@
+name: Deploy to JustRunMy (git push)
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+      # Checks out your repo into the runner workspace <!--citation:4-->
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Push to JustRunMy Git remote (triggers deploy)
+        env:
+          JRNM_GIT_URL: ${{ secrets.JRMA_GIT_REPO }}
+        run: |
+          # Add remote and push current commit to the remote's main branch
+          git push -u "$JRNM_GIT_URL" HEAD:deploy
+          
