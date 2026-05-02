@@ -19,6 +19,6 @@ jobs:
         env:
           JRNM_GIT_URL: ${{ secrets.JRMA_GIT_REPO }}
         run: |
-          # Add remote and push current commit to the remote's main branch
-          git push -u "$JRMA_GIT_REPO" HEAD:deploy
+          # Push the current commit directly to the remote URL's deploy branch
+          git push -u "$JRNM_GIT_URL" HEAD:deploy
           
