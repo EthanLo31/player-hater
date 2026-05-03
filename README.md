@@ -13,8 +13,6 @@ Only club executives are authorized to develop and make changes to this bot. Fur
 
 ## Deployment
 
-**Hosting**: The bot is hosted on [justrunmy.app](https://justrunmy.app).
+**Hosting**: The bot is hosted on [wispbyte.com](https://wispbyte.com).
 
-**Automatic Deployment**: A GitHub Action automatically deploys the bot whenever changes are pushed to the `main` branch.
-
-**Deployment Limits**: The bot can only be deployed **3 times in a 24-hour period** due to hosting provider constraints. Plan deployments accordingly.
+**Deployment**: Deployments must be made manually through the wispbyte dashboard. Currently only the repo owner has access to that.
